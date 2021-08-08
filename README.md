@@ -53,6 +53,7 @@ Link para o curso: https://web.digitalinnovation.one/course/introducao-ao-git-e-
 > git log --author="Alan"
 > git shortlog
 > git log --graph
+> git log --oneline
 ```
 
 ## Visualizando diferenças antes do commit
@@ -65,18 +66,25 @@ Link para o curso: https://web.digitalinnovation.one/course/introducao-ao-git-e-
 ## Voltando para versão
 
 ```
-> git checkout Readme.md(unmodified)
-> git reset HEAD Readme.md(state)
-> git reset --soft(commit) <numbercommit>
-> git reset --mixed(commit) <numbercommit>
+> git reset --soft(staged) <numbercommit>
+> git reset --mixed(untracked) <numbercommit>
 > git reset --hard(commit) <numbercommit>
+> git revert <numbercommit>
 ```
 
 ## Branchs
 
 ```
 > git branch
-> git checkout -b test (Criar um branch)
-> git checkout master (Mudar de branch)
-> git branch -D test (Deletar um branch)
+> git checkout -b <namebranch> (Criar um branch)
+> git checkout <namebranch> (Mudar de branch)
+> git branch -D <namebranch> (Deletar um branch)
+```
+
+## Stash
+
+```
+> git stash save "first stash"
+> git stash list
+> git stash pop 1
 ```
